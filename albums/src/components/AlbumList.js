@@ -22,18 +22,20 @@ class AlbumList extends Component {
       .then(response => this.setState({ albums: response.data }));
   }
 
-  //(3) Helper function til að generatea lista af albums
+  //(3) Helper function sem býr til lista af albums
   renderAlbums() {
     //map er array helper þar sem albums er array
     //reference í js variable þá nota {}
-    return this.state.albums.map(album => <Text>{album.title}</Text>);
+    //key sem react notar sem segir til um hvaða item er verið að uppfæra, einskonar id.
+    return this.state.albums.map(album =>
+      <Text key={album.title}>{album.title}</Text>);
   }
 
   render() {
     //renderar fyrst tóma og svo með gögnum vegna setState uppfærði í millitíðinni
     console.log(this.state);
 
-    //(3)
+    //(3) kallar í hjálpar fallið sem skrifar út
     return (
       <View>
         {this.renderAlbums()}
