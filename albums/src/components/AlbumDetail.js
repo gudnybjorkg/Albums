@@ -9,21 +9,34 @@ import CardSection from './CardSection';
 //sækja beint það sem verið að nota, þá er hægt að gera const breytu og pikka út það
 //sem þarf til að nota hverju sinni í stað þess að skrifa alla gommuna
 //props.album.title og kalla því beint í title.
+//sama á við um styles
 const AlbumDetail = ({ album }) => {
-  const { title, artist, thumbnail_image } = album;
+  //Props
+  const {
+    title,
+    artist,
+    thumbnail_image
+  } = album;
+
+  //Styles
+  const {
+    thumbnailStyle,
+    headerContentStyle,
+    thumbnailContainerStyle,
+    headerTextStyle
+  } = styles;
 
   return (
     <Card>
       <CardSection>
-        <View style={styles.headerContentStyle}>
+        <View style={thumbnailContainerStyle}>
           <Image
-            style={styles.thumbnailStyle}
+            style={thumbnailStyle}
             source={{ uri: thumbnail_image }}
           />
         </View>
-
-        <View>
-          <Text>{title}</Text>
+        <View style={headerContentStyle}>
+          <Text style={headerTextStyle}>{title}</Text>
           <Text>{artist}</Text>
         </View>
       </CardSection>
@@ -36,9 +49,18 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'space-around'
   },
+  headerTextStyle: {
+    fontSize: 18
+  },
   thumbnailStyle: {
     height: 50,
     width: 50
+  },
+  thumbnailContainerStyle: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 10,
+    marginRight: 10
   }
 };
 
