@@ -9,9 +9,7 @@ const AlbumDetail = (props) => {
   return (
     <Card>
       <CardSection>
-        <Image />
         <Text>{props.album.title}</Text>
-        <Text>{props.album.artist}</Text>
       </CardSection>
     </Card>
   );
