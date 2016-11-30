@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import Button from './Button';
 
 //Þar sem þetta er bara presentational component þá þarf hann ekki að vera með state
 //hann þarf því ekki að vera class og er því functional component
@@ -42,11 +43,16 @@ const AlbumDetail = ({ album }) => {
           <Text>{artist}</Text>
         </View>
       </CardSection>
+      
       <CardSection>
         <Image
           style={imageStyle}
           source={{ uri: image }}
         />
+      </CardSection>
+
+      <CardSection>
+        <Button />
       </CardSection>
     </Card>
   );
