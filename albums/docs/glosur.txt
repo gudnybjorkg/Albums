@@ -2,7 +2,11 @@
   - Notað til þess að halda utan um responses þar sem gögn eru að breytast.
   - this.setState er notað til þess að rerendara stateið með ákveðnum gögnum. Þ.e. uppfærir það sem componentinn ætlar að sýna á skjánum
     ekki nota neitt annað en setState til þess að breyta state. Nema við init þá er hægt að gera state = ...
-  - Bara notað með class based components, ekki hægt með öðrum components. 
+  - Bara notað með class based components, ekki hægt með öðrum components.
 
 * Props:
   - Notað þegar átt er við gagnafærslur milli parent og child. Þ.e. bara Parent-Child comunication en ekki almenn gagnafærslur/breytingar
+
+* Passing components around:
+  - Find the compontent that we want to wrap.
+  - Þegar við sendum á milli component sem við sjálf höfum skrifað í annan component þá mun hann vera sóttur sem {props.children}
