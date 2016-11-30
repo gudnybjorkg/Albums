@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import axios from 'axios';
+import AlbumDetail from './AlbumDetail';
 
 class AlbumList extends Component {
   // (1) Setup default initial state (empty state)
@@ -27,8 +28,10 @@ class AlbumList extends Component {
     //map er array helper þar sem albums er array
     //reference í js variable þá nota {}
     //key sem react notar sem segir til um hvaða item er verið að uppfæra, einskonar id.
+    //album er nafnið á propinu sem er sent sem á AlbumDetail.
     return this.state.albums.map(album =>
-      <Text key={album.title}>{album.title}</Text>);
+      <AlbumDetail key={album.title} album={album} />
+    );
   }
 
   render() {
