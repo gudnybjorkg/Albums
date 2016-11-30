@@ -10,3 +10,19 @@
 * Passing components around:
   - Find the compontent that we want to wrap.
   - Þegar við sendum á milli component sem við sjálf höfum skrifað í annan component þá mun hann vera sóttur sem {props.children}
+
+* Flex-box
+  Notað til að styla til og koma hlutum á réttan stað. Þ.e. componentar sem eiga að vera þvers og kruss í viewi í stað þess að listast í röð niður.
+
+  * JustifyContent (vertical)
+    - justifyContent : 'space-between': setur bil á milli eininga sem eru í honum og gerir jafnt bil á milli þeirra.
+      Ekkeret scase á milli top og efstu einingu og eins með neðstu og botninn.
+    - justifyContent : 'center' : gerir allt centrað á vertical ásinn (upp og niður)
+    - justifyContent : 'space-around' : þetta er öfugt við space between, þ.e. gerir bil á milli tops og efstu einingu og eins með neðstu ásamt því
+      að það gerir líka bil á milli allra eininga. Þetta á bara við um vertical ásinn, þ.e. top og bottom en það verður ekki til bil til hliðanna.
+    - justifyContent : 'flex-end' : lætur allt fljóta yfir til hægri, þ.e. allt byrjar að listast frá hægri (vertical ás)
+    - justifyContent : 'flex-start' : lætur allt fljóta yfir vinstra megin, þ.e. allt byrjar að listast frá vinstri (vertical ás)
+
+  * FlexDirection
+    - flexDirection : 'row' : lætur einingarnar raðast í einni röð <--> í containernum. Þ.e. listast til hliðar
+    - flexDirection : 'column' : þetta er default.  lætur allt raðast í dálka í containernum. Þ.e. listast niður

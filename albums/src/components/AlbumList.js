@@ -27,7 +27,7 @@ class AlbumList extends Component {
   renderAlbums() {
     //map er array helper þar sem albums er array
     //reference í js variable þá nota {}
-    //key sem react notar sem segir til um hvaða item er verið að uppfæra, einskonar id.
+    //key sem react notar sem segir til um hvaða item er verið að uppfæra, þ.e. id fyrir hlutinn.
     //album er nafnið á propinu sem er sent sem á AlbumDetail.
     return this.state.albums.map(album =>
       <AlbumDetail key={album.title} album={album} />
