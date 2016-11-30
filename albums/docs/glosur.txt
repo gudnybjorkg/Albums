@@ -26,3 +26,7 @@
   * FlexDirection
     - flexDirection : 'row' : lætur einingarnar raðast í einni röð <--> í containernum. Þ.e. listast til hliðar
     - flexDirection : 'column' : þetta er default.  lætur allt raðast í dálka í containernum. Þ.e. listast niður
+
+  * Image
+    - fyllir ekki sjálfkrafa út í það space sem það fær. Þ.e. það mun ekki birtast fyrr en búið er að skilgreina reglu um hvernig hún á að vera
+      og hversu stór, width og height. 
