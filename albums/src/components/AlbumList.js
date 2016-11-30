@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import axios from 'axios';
 import AlbumDetail from './AlbumDetail';
 
@@ -39,10 +39,11 @@ class AlbumList extends Component {
     console.log(this.state);
 
     //(3) kallar í hjálpar fallið sem skrifar út
+    //Gera scrollable svo hægt sé að skrolla niður öll albumin.
     return (
-      <View>
+      <ScrollView>
         {this.renderAlbums()}
-      </View>
+      </ScrollView>
     );
   }
 }

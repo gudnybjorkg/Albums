@@ -27,6 +27,19 @@
     - flexDirection : 'row' : lætur einingarnar raðast í einni röð <--> í containernum. Þ.e. listast til hliðar
     - flexDirection : 'column' : þetta er default.  lætur allt raðast í dálka í containernum. Þ.e. listast niður
 
-  * Image
-    - fyllir ekki sjálfkrafa út í það space sem það fær. Þ.e. það mun ekki birtast fyrr en búið er að skilgreina reglu um hvernig hún á að vera
-      og hversu stór, width og height. 
+* Image
+  - fyllir ekki sjálfkrafa út í það space sem það fær. Þ.e. það mun ekki birtast fyrr en búið er að skilgreina reglu um hvernig hún á að vera
+    og hversu stór, width og height.
+  - styling: til þess að láta mynd fitta miðað við stærð á skjánum og skalast miðað við mismunandi skjástæðir.
+    Oft gott að specify-a heightina ef myndin á ekki að fylla allan skjáinn en svo að gera width skalanlegt.
+      height: 300,
+      flex: 1, // þá notar það allan containerinn
+      width: null // þá er það undefined og fyllir því út í allt þar sem flex er til staðar.
+
+* Scrolling
+  - by default þá er ekki scroll þó svo contentið nái niður fyrir skjáinn.
+  - til að enable skrolling
+    1. identify the jsx tags that we expect to be scrollable -> þetta væri því stóri containerinn sem sér um að búa til og rendera allar einingarnar
+    2. importa scrollview sem er rn component.
+  - þegar maður er með scroll view þá þarf að bæta við style á það með flex: 1 á root view. (App í index.ios.js)
+    Af því það lætur componentinn expanda út í allt. Þó svo það líti út fyrir að gera það til að byrja með

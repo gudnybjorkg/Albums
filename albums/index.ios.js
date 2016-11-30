@@ -5,8 +5,9 @@ import Header from './src/components/Header';
 import AlbumList from './src/components/AlbumList';
 
 // Create a component
+// þar sem það er bara eitt style á þessu þá má gera þetta bara svona
 const App = () => (
-  <View>
+  <View style={{ flex: 1 }}>
     <Header headerText={'Albums'} />
     <AlbumList />
   </View>
