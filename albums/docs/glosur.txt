@@ -52,10 +52,13 @@
     Af því það lætur componentinn expanda út í allt. Þó svo það líti út fyrir að gera það til að byrja með
 
 * Button
-  Mismunandi tegundir af button sem gefa mismunandi feedback til notandans
+  - Mismunandi tegundir af button sem gefa mismunandi feedback til notandans
     - TouchableHighlight: breytir um lit þegar ýtt er á, þ.e. setur á highlight
     - TouchableNativeFeedback:
     - TouchableOpacity: dimmar buttoninn sem feedback þegar ýtt er á
     - TouchableWithoutFeedback:
 
     - Það er listener á tökkunum sem hægt er að nota til að keyra einhverja lógík.
+  - onPress: (má samt heita hvað sem er eins og whenPressed)
+    - tekur inn fall sem skrifar í console: onPress={() => console.log('pressed!')}
+    - til að gera generic comonent úr button. Svo hann geti tekið inn hvað sem er sem hann ætti að opna við Click. Parentið sendir þá það sem á að gerast.
