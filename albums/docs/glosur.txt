@@ -20,7 +20,8 @@
     - justifyContent : 'center' :       gerir allt centrað á vertical ásinn (upp og niður)
     - justifyContent : 'space-around' : þetta er öfugt við space between, þ.e. gerir bil á milli tops og efstu einingu og
                                         eins með neðstu ásamt því
-                                        að það gerir líka bil á milli allra eininga. Þetta á bara við um vertical ásinn, þ.e. top og bottom en það verður ekki til bil til hliðanna.
+                                        að það gerir líka bil á milli allra eininga. Þetta á bara við um vertical ásinn, þ.e. top og bottom en
+                                        það verður ekki til bil til hliðanna.
     - justifyContent : 'flex-end' :     lætur allt fljóta yfir til hægri, þ.e. allt byrjar að listast frá hægri (vertical ás)
     - justifyContent : 'flex-start' :   lætur allt fljóta yfir vinstra megin, þ.e. allt byrjar að listast frá vinstri (vertical ás)
 
@@ -61,4 +62,10 @@
     - Það er listener á tökkunum sem hægt er að nota til að keyra einhverja lógík.
   - onPress: (má samt heita hvað sem er eins og whenPressed)
     - tekur inn fall sem skrifar í console: onPress={() => console.log('pressed!')}
-    - til að gera generic comonent úr button. Svo hann geti tekið inn hvað sem er sem hann ætti að opna við Click. Parentið sendir þá það sem á að gerast.
+    - til að gera generic comonent úr button. Svo hann geti tekið inn hvað sem er sem hann ætti að opna við Click. Parentið sendir þá það sem á
+      að gerast.
+  - Linking:
+    - https://facebook.github.io/react-native/docs/linking.html
+    - Library sem gerir manni kleift að tala við önnur library eða applications sem eru að keyra á tækinu. T.d. browser, uber eða hvaða application
+      sem er.
+    - 
