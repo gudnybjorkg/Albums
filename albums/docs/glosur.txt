@@ -16,16 +16,23 @@
 
   * JustifyContent (vertical)
     - justifyContent : 'space-between': setur bil á milli eininga sem eru í honum og gerir jafnt bil á milli þeirra.
-      Ekkeret scase á milli top og efstu einingu og eins með neðstu og botninn.
-    - justifyContent : 'center' : gerir allt centrað á vertical ásinn (upp og niður)
-    - justifyContent : 'space-around' : þetta er öfugt við space between, þ.e. gerir bil á milli tops og efstu einingu og eins með neðstu ásamt því
-      að það gerir líka bil á milli allra eininga. Þetta á bara við um vertical ásinn, þ.e. top og bottom en það verður ekki til bil til hliðanna.
-    - justifyContent : 'flex-end' : lætur allt fljóta yfir til hægri, þ.e. allt byrjar að listast frá hægri (vertical ás)
-    - justifyContent : 'flex-start' : lætur allt fljóta yfir vinstra megin, þ.e. allt byrjar að listast frá vinstri (vertical ás)
+                                        Ekkeret scase á milli top og efstu einingu og eins með neðstu og botninn.
+    - justifyContent : 'center' :       gerir allt centrað á vertical ásinn (upp og niður)
+    - justifyContent : 'space-around' : þetta er öfugt við space between, þ.e. gerir bil á milli tops og efstu einingu og
+                                        eins með neðstu ásamt því
+                                        að það gerir líka bil á milli allra eininga. Þetta á bara við um vertical ásinn, þ.e. top og bottom en það verður ekki til bil til hliðanna.
+    - justifyContent : 'flex-end' :     lætur allt fljóta yfir til hægri, þ.e. allt byrjar að listast frá hægri (vertical ás)
+    - justifyContent : 'flex-start' :   lætur allt fljóta yfir vinstra megin, þ.e. allt byrjar að listast frá vinstri (vertical ás)
 
   * FlexDirection
     - flexDirection : 'row' : lætur einingarnar raðast í einni röð <--> í containernum. Þ.e. listast til hliðar
     - flexDirection : 'column' : þetta er default.  lætur allt raðast í dálka í containernum. Þ.e. listast niður
+
+  * Align
+    - alignItems : container tels all it children that it needs to position in some fashion.
+    - alignSelf : when we want a item to position itself using flexbox rules.
+        - alignSelf: 'strecth' : stretch to fill this container
+
 
 * Image
   - fyllir ekki sjálfkrafa út í það space sem það fær. Þ.e. það mun ekki birtast fyrr en búið er að skilgreina reglu um hvernig hún á að vera
@@ -33,7 +40,7 @@
   - styling: til þess að láta mynd fitta miðað við stærð á skjánum og skalast miðað við mismunandi skjástæðir.
     Oft gott að specify-a heightina ef myndin á ekki að fylla allan skjáinn en svo að gera width skalanlegt.
       height: 300,
-      flex: 1, // þá notar það allan containerinn
+      flex: 1, // fyllir út í containerinn eins mikið og hann getur
       width: null // þá er það undefined og fyllir því út í allt þar sem flex er til staðar.
 
 * Scrolling
@@ -43,3 +50,12 @@
     2. importa scrollview sem er rn component.
   - þegar maður er með scroll view þá þarf að bæta við style á það með flex: 1 á root view. (App í index.ios.js)
     Af því það lætur componentinn expanda út í allt. Þó svo það líti út fyrir að gera það til að byrja með
+
+* Button
+  Mismunandi tegundir af button sem gefa mismunandi feedback til notandans
+    - TouchableHighlight: breytir um lit þegar ýtt er á, þ.e. setur á highlight
+    - TouchableNativeFeedback:
+    - TouchableOpacity: dimmar buttoninn sem feedback þegar ýtt er á
+    - TouchableWithoutFeedback:
+
+    - Það er listener á tökkunum sem hægt er að nota til að keyra einhverja lógík.
