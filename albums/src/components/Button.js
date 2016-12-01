@@ -2,14 +2,18 @@ import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 
 // onPress er parsað áfram í stað props sem kemur frá parentinu og er það sem er
-//sent áfram í touchableOpacity takkann. 
-const Button = ({ onPress }) => {
+//sent áfram í touchableOpacity takkann.
+//Hann fattar hvað children þýðir. 
+const Button = ({ onPress, children }) => {
   const { buttonStyle, textStyle } = styles;
 
+  //Getur því tekið hvaða texta sem er sem lætur hann fá texta. Button verður því
+  //alveg abstract og því hægt að nota hvar sem með þessu útliti óháð hvað stendur
+  //og hvert skal fara við það að ýta á hann.
   return (
     <TouchableOpacity onPress={onPress} style={buttonStyle}>
       <Text style={textStyle}>
-        Click me!!!
+        {children}
       </Text>
     </TouchableOpacity>
   );
