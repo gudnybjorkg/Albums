@@ -23,17 +23,15 @@
 * Firewall
   - online database sem hægt er að tengja beint við appið.
   - firebase.google.com
-    - þarf google account.
     - create new project
       - slá inn nafn á projecti og staðsetningu og ok.
-      - gæti tekið smá tíma
-    - opnast dashbord
+    - Dashbord
       - þar undir eru Authentication, database, storage og fleira.
-      - með því að nota með react-native, varðandi documentation þá passar það ekkert í bara ios, andriod þá add firebase to your web App
-    - Velja project namið (Authentication)
+      - add firebase to your web App
+    - Velja project namið
       - velja setup sign-in method
-      - þar eru allskonar providerar; fb, google ofl.
-      - ekki mikill stuðningur fyrir þessu samt.
-      - nota email og passord - enable - save
-  - install firebase með npm
-    npm install --save firebase
+      - þar eru allskonar providerar; fb, google ofl. en ekki mikill stuðningur fyrir þessu samt.
+      - nota email og passord -> enable -> save
+  - Install firebase
+    - npm install --save firebase
+    - segja þegar bootað er upp að nota þá ákveðið búnt af gögnum
