@@ -53,3 +53,12 @@
     ekkert í raun gerist við að skrifa text nema því input veit ekkert hvað value-ið sitt er nema honum sé sagt það
     nema með onChangeText kallinu sem uppfærir state-ið. state er því rerenderað og þarf því að uppfæra
     value í inputext svo að það sé með það gildi. þessi cycle heldur svo áfram alltaf þegar textanum er breytt í inputinu.
+
+* Flex
+  - þegar við erum með children eigindi sem eru siblings þá er hægt að ákvarða hvaða child á að vera í hvaða spacei miðað við parent containerinn.
+    það fer eftir hversu mörg children en fyrir hvert flex sem er skilgreint þá leggjast þau saman og tala þess children deilt með fjöldanum væri
+    spaceið sem hann fær úthlutað
+      t.d. ef það eru 3 children þá væri:
+        flex: 1 : 1/4 af containernum
+        flex: 2 : 2/4 af containernum
+        flex: 1 : 1/4 af containernum
