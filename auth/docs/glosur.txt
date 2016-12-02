@@ -35,4 +35,5 @@
       - þar eru allskonar providerar; fb, google ofl.
       - ekki mikill stuðningur fyrir þessu samt.
       - nota email og passord - enable - save
-    - komið
+  - install firebase með npm
+    npm install --save firebase
