@@ -45,7 +45,11 @@
     - með því að nota state með property text
     state = {text: ''};
     <TextInput
-      value={this.state.text}                           // gildið sem sést í fieldinu er uppfært miðað við stateið 
+      value={this.state.text}                           // gildið sem sést í fieldinu er uppfært miðað við stateið sem er svo hægt að nota miðað við keyið
       onChangeText={text => this.setState({ text })}    // keyrist við það að texti er skrifaður í inputfieldið og breytir stateinu miðað við textann.
       style={{ height: 20, width: 100 }}                // útlit
     />
+  - Textinput -> User types text -> onChangeText event called -> setState with new text -> comonent renders
+    ekkert í raun gerist við að skrifa text nema því input veit ekkert hvað value-ið sitt er nema honum sé sagt það
+    nema með onChangeText kallinu sem uppfærir state-ið. state er því rerenderað og þarf því að uppfæra
+    value í inputext svo að það sé með það gildi. þessi cycle heldur svo áfram alltaf þegar textanum er breytt í inputinu.
