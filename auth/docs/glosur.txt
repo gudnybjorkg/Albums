@@ -38,3 +38,14 @@
   - Install firebase
     - npm install --save firebase
     - import firebase from 'fireabse';
+
+* Text input
+  - hafa ekki fyrirfram sett height og width, svipað og með Image það þarf því að gera allt styling til að gera það sýnilegt
+  - access the text from the user input:
+    - með því að nota state með property text
+    state = {text: ''};
+    <TextInput
+      value={this.state.text}                           // gildið sem sést í fieldinu er uppfært miðað við stateið 
+      onChangeText={text => this.setState({ text })}    // keyrist við það að texti er skrifaður í inputfieldið og breytir stateinu miðað við textann.
+      style={{ height: 20, width: 100 }}                // útlit
+    />
