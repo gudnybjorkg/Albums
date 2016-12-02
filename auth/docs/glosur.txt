@@ -1,0 +1,22 @@
+* Import
+  - Imporata öðrum skrám í eina skrá:
+      Header
+      Button        ->    Index.js
+      CardSection
+      Card
+
+      -Með því að:
+        passthrough, þ.e. taka allt úr þessari skrá og exportaðu henni í viðkomandi skrá
+        en með þessu er ekki hægt að nota export default Button. Það þarf að export { Button: Button }; í sjálfri skránni sem er í common möppunni. 
+        en hægt að stytta það með es6 með export { Button };
+        export * from './Button';
+
+       Í stað þess að gera
+        import Button from ..
+        export default ..
+
+        import {
+          Header,
+          Button
+        } from './Components/Common';
+      -

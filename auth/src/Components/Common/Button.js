@@ -3,7 +3,7 @@ import { Text, TouchableOpacity } from 'react-native';
 
 // onPress er parsað áfram í stað props sem kemur frá parentinu og er það sem er
 //sent áfram í touchableOpacity takkann.
-//Hann fattar hvað children þýðir. 
+//Hann fattar hvað children þýðir.
 const Button = ({ onPress, children }) => {
   const { buttonStyle, textStyle } = styles;
 
@@ -40,4 +40,9 @@ const styles = {
   }
 };
 
-export default Button;
+//Til þess að endurnýta þennan klasa án þess að þurfa að importa henni alltaf sérstaklega
+//þá er hún frekar exportuð í staðin og því þarf þetta að vera svona
+//má líka vera key value en þar sem heitið er það sama þá má stytta þetta svona
+//      export { Button: Button };
+//export default Button;
+export { Button };

@@ -25,4 +25,10 @@ const styles = {
     marginTop: 10
   }
 };
-export default Card;
+
+//Til þess að endurnýta þennan klasa án þess að þurfa að importa henni alltaf sérstaklega
+//þá er hún frekar exportuð í staðin og því þarf þetta að vera svona
+//má líka vera key value en þar sem heitið er það sama þá má stytta þetta svona
+//      export { Card: Card };
+//export default Card;
+export { Card };

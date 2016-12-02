@@ -32,4 +32,10 @@ const styles = {
 };
 
 // Make component availabele to other parts of the app
-export default Header;
+
+//Til þess að endurnýta þennan klasa án þess að þurfa að importa henni alltaf sérstaklega
+//þá er hún frekar exportuð í staðin og því þarf þetta að vera svona
+//má líka vera key value en þar sem heitið er það sama þá má stytta þetta svona
+//      export { Header: Header };
+//export default Header;
+export { Header };

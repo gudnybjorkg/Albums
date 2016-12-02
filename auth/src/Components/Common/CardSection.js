@@ -23,4 +23,9 @@ const styles = {
   }
 };
 
-export default CardSection;
+//Til þess að endurnýta þennan klasa án þess að þurfa að importa henni alltaf sérstaklega
+//þá er hún frekar exportuð í staðin og því þarf þetta að vera svona
+//má líka vera key value en þar sem heitið er það sama þá má stytta þetta svona
+//      export { CardSection: CardSection };
+//export default CardSection;
+export { CardSection };
