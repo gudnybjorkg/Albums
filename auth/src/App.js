@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import firebase from 'firebase';
 import { Header } from './Components/Common';
+import LoginForm from './Components/LoginForm';
 
 class App extends Component {
   // kallast automatískt í það ef það er skilgreint hér.
   componentWillMount() {
-    firebase.initislizeApp({
+    firebase.initializeApp({
       apiKey: 'AIzaSyAZIDxuXhvo3bvDplQVErcYYTJd42AUtxA',
       authDomain: 'authentication-13509.firebaseapp.com',
       databaseURL: 'https://authentication-13509.firebaseio.com',
@@ -14,11 +15,12 @@ class App extends Component {
       messagingSenderId: '599250066361'
     });
   }
+
   render() {
     return (
         <View>
           <Header headerText="Authentication" />
-          <Text>An App!</Text>
+          <LoginForm />
         </View>
     );
   }
