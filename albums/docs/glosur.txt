@@ -14,25 +14,25 @@
 * Flex-box
   Notað til að styla til og koma hlutum á réttan stað. Þ.e. componentar sem eiga að vera þvers og kruss í viewi í stað þess að listast í röð niður.
 
-  * JustifyContent (vertical)
-    - justifyContent : 'space-between': setur bil á milli eininga sem eru í honum og gerir jafnt bil á milli þeirra.
+  - JustifyContent (vertical)
+    - justifyContent : 'space-between'  setur bil á milli eininga sem eru í honum og gerir jafnt bil á milli þeirra.
                                         Ekkeret scase á milli top og efstu einingu og eins með neðstu og botninn.
-    - justifyContent : 'center' :       gerir allt centrað á vertical ásinn (upp og niður)
-    - justifyContent : 'space-around' : þetta er öfugt við space between, þ.e. gerir bil á milli tops og efstu einingu og
+    - justifyContent : 'center'         gerir allt centrað á vertical ásinn (upp og niður)
+    - justifyContent : 'space-around'   þetta er öfugt við space between, þ.e. gerir bil á milli tops og efstu einingu og
                                         eins með neðstu ásamt því
                                         að það gerir líka bil á milli allra eininga. Þetta á bara við um vertical ásinn, þ.e. top og bottom en
                                         það verður ekki til bil til hliðanna.
-    - justifyContent : 'flex-end' :     lætur allt fljóta yfir til hægri, þ.e. allt byrjar að listast frá hægri (vertical ás)
-    - justifyContent : 'flex-start' :   lætur allt fljóta yfir vinstra megin, þ.e. allt byrjar að listast frá vinstri (vertical ás)
+    - justifyContent : 'flex-end'       lætur allt fljóta yfir til hægri, þ.e. allt byrjar að listast frá hægri (vertical ás)
+    - justifyContent : 'flex-start'     lætur allt fljóta yfir vinstra megin, þ.e. allt byrjar að listast frá vinstri (vertical ás)
 
-  * FlexDirection
-    - flexDirection : 'row' : lætur einingarnar raðast í einni röð <--> í containernum. Þ.e. listast til hliðar
-    - flexDirection : 'column' : þetta er default.  lætur allt raðast í dálka í containernum. Þ.e. listast niður
+  - FlexDirection
+    - flexDirection : 'row'             lætur einingarnar raðast í einni röð <--> í containernum. Þ.e. listast til hliðar
+    - flexDirection : 'column'          þetta er default.  lætur allt raðast í dálka í containernum. Þ.e. listast niður
 
-  * Align
+  - Align
     - alignItems : container tels all it children that it needs to position in some fashion.
     - alignSelf : when we want a item to position itself using flexbox rules.
-        - alignSelf: 'strecth' : stretch to fill this container
+        - alignSelf: 'strecth'          stretch to fill this container
 
 
 * Image
@@ -41,8 +41,8 @@
   - styling: til þess að láta mynd fitta miðað við stærð á skjánum og skalast miðað við mismunandi skjástæðir.
     Oft gott að specify-a heightina ef myndin á ekki að fylla allan skjáinn en svo að gera width skalanlegt.
       height: 300,
-      flex: 1, // fyllir út í containerinn eins mikið og hann getur
-      width: null // þá er það undefined og fyllir því út í allt þar sem flex er til staðar.
+      flex: 1,                          // fyllir út í containerinn eins mikið og hann getur
+      width: null                       // þá er það undefined og fyllir því út í allt þar sem flex er til staðar.
 
 * Scrolling
   - by default þá er ekki scroll þó svo contentið nái niður fyrir skjáinn.
@@ -54,9 +54,9 @@
 
 * Button
   - Mismunandi tegundir af button sem gefa mismunandi feedback til notandans
-    - TouchableHighlight: breytir um lit þegar ýtt er á, þ.e. setur á highlight
+    - TouchableHighlight:             breytir um lit þegar ýtt er á, þ.e. setur á highlight
     - TouchableNativeFeedback:
-    - TouchableOpacity: dimmar buttoninn sem feedback þegar ýtt er á
+    - TouchableOpacity:               dimmar buttoninn sem feedback þegar ýtt er á
     - TouchableWithoutFeedback:
 
     - Það er listener á tökkunum sem hægt er að nota til að keyra einhverja lógík.
@@ -68,4 +68,4 @@
     - https://facebook.github.io/react-native/docs/linking.html
     - Library sem gerir manni kleift að tala við önnur library eða applications sem eru að keyra á tækinu. T.d. browser, uber eða hvaða application
       sem er.
-    - 
+    -
