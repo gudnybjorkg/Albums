@@ -32,6 +32,9 @@
       - velja setup sign-in method
       - þar eru allskonar providerar; fb, google ofl. en ekki mikill stuðningur fyrir þessu samt.
       - nota email og passord -> enable -> save
+      - Web setup (efst til hægri)
+        - gefur upp glugga með kóða sem hægt er að afrita. Þar sem við erum ekki með web based þá er hægt að nýta hluta.
+          - afrita config hlutan með innan slaufusviganna.
   - Install firebase
     - npm install --save firebase
-    - segja þegar bootað er upp að nota þá ákveðið búnt af gögnum
+    - import firebase from 'fireabse';
