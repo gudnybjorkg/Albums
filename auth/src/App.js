@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import { Header } from './Componentst/Common';
+import { Header } from './Components/Common';
 
 class App extends Component {
   render() {

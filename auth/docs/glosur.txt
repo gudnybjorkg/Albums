@@ -5,18 +5,19 @@
       CardSection
       Card
 
-      -Með því að:
-        passthrough, þ.e. taka allt úr þessari skrá og exportaðu henni í viðkomandi skrá
-        en með þessu er ekki hægt að nota export default Button. Það þarf að export { Button: Button }; í sjálfri skránni sem er í common möppunni. 
-        en hægt að stytta það með es6 með export { Button };
-        export * from './Button';
+      1. Með því að gera index.js skrá undir möppunni sem þessar skrár eru í
+        - verður að vera með litlum staf því react-native fer og athugar þar automatískt.
+        - skrifa eftirfarandi í index.js fyrir þær skrár sem á exporta.
+            export * from './Button';
 
-       Í stað þess að gera
-        import Button from ..
-        export default ..
+      2. Fara í skrárnar sem verið er að exporta og í stað þess að gera 'export default Button' þá hafa
+            export { Button };
+        - má líka vera export { Button : Button }; en þar sem nafnið er það sama þá má stytta það í bara Button
 
-        import {
-          Header,
-          Button
-        } from './Components/Common';
-      -
+      3. Í þeirri skrá sem ætlar að sækja þessar skrár þá er hægt að gera:
+            import {
+              Button,
+              ...
+            } from './Components/Common';
+
+*
