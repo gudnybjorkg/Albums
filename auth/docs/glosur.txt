@@ -53,6 +53,9 @@
     ekkert í raun gerist við að skrifa text nema því input veit ekkert hvað value-ið sitt er nema honum sé sagt það
     nema með onChangeText kallinu sem uppfærir state-ið. state er því rerenderað og þarf því að uppfæra
     value í inputext svo að það sé með það gildi. þessi cycle heldur svo áfram alltaf þegar textanum er breytt í inputinu.
+  - SecureText: Hvernig á að dulbúa texta með *** í stað plaintext
+    parsa propinu secureTextEntry={true} í TextInput fieldið. Má líka bara skrifa secureTextEntry því öll boolean gildi koma þá sem true automatiskt
+    klasinn sem er að taka við þessu er þá með secureTextEntry={secureTextEntry}
 
 * Flex
   - þegar við erum með children eigindi sem eru siblings þá er hægt að ákvarða hvaða child á að vera í hvaða spacei miðað við parent containerinn.
