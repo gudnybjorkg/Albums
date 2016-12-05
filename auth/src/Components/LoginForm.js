@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Text } from 'react-native';
 import firebase from 'firebase';
 import { Button, Card, CardSection, Input } from './Common';
 
@@ -9,7 +10,13 @@ class LoginForm extends Component {
   onButtonPress() {
     const { email, password } = this.state;
 
-    firebase.auth().signInWithEmailAndPassword(email, password);
+    //Try to login if fails then try to create a new user
+    firebase.auth().signInWithEmailAndPassword(email, password).catch(() => {
+      firebase.auth().createUserWitEmailAndPassword(email, password).catch(() => {
+        //If createing an user fails then return error message to the screen
+        this.setState({ error: 'Authentication Failed.' });
+      });
+    });
   }
 
   render() {
@@ -32,6 +39,10 @@ class LoginForm extends Component {
             onChangeText={password => this.setState({ password })}
           />
         </CardSection>
+
+        <Text>
+          {this.state.error}
+        </Text>
 
         <CardSection>
           <Button opPress={this.onButtonPress.bind(this)}>

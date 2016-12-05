@@ -38,6 +38,11 @@
   - Install firebase
     - npm install --save firebase
     - import firebase from 'fireabse';
+  * firebase
+    - firebase.auth().signInWithEmailAndPassword skilar loforði umað eitthvað hafi tekist eða ekki
+    firebase.auth().signInWithEmailAndPassword().catch() => {
+      ... búa til user ef hann var ekki til annars logga út villuna
+    } // þetta grípur þá villu ef eitthvað skyldi koma upp (try/catch)
 
 * Text input
   - hafa ekki fyrirfram sett height og width, svipað og með Image það þarf því að gera allt styling til að gera það sýnilegt
@@ -65,3 +70,7 @@
         flex: 1 : 1/4 af containernum
         flex: 2 : 2/4 af containernum
         flex: 1 : 1/4 af containernum
+
+* Button
+  callbackfunction:
+  bind.(this):
