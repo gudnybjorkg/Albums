@@ -2,10 +2,11 @@ import React from 'react';
 import { View, ActivityIndicator } from 'react-native';
 
 //Use the default spinner in react-native
-const Spinner = () => {
+const Spinner = ({ size }) => {
+  //if the size is not specified then it will be large
   return (
     <View style={styles.spinnerStyle}>
-      <ActivityIndicator />
+      <ActivityIndicator size={size || 'large'} />
     </View>
   );
 };

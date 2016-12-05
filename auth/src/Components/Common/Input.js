@@ -19,7 +19,7 @@ const Input = ({ label, value, onChangeText, placeHolder, secureTextEntry }) => 
   );
 };
 
-styles = {
+const styles = {
   inputStyle: {
     color: '#000',
     paddingRight: 5,
