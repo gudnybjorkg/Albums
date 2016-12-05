@@ -10,12 +10,19 @@ class LoginForm extends Component {
   onButtonPress() {
     const { email, password } = this.state;
 
+    //clear out error message if the user tries to log in again.
+    this.setState({ error: '' });
+
     //Try to login if fails then try to create a new user
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(() => {
-      firebase.auth().createUserWitEmailAndPassword(email, password).catch(() => {
-        //If createing an user fails then return error message to the screen
-        this.setState({ error: 'Authentication Failed.' });
-      });
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .catch(() => {
+        console.log('sign In failed');
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+        .catch(() => {
+          console.log('crate user failed');
+          //If createing an user fails then return error message to the screen
+          this.setState({ error: 'Authentication Failed.' });
+        });
     });
   }
 
@@ -45,7 +52,7 @@ class LoginForm extends Component {
         </Text>
 
         <CardSection>
-          <Button opPress={this.onButtonPress.bind(this)}>
+          <Button onPress={this.onButtonPress.bind(this)}>
             Log in
           </Button>
         </CardSection>
