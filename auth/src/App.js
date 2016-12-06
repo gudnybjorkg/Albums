@@ -33,7 +33,7 @@ class App extends Component {
         return (
           <View>
             <Text>You are now logged in! :) </Text>
-            <Button onPress={() => firebase.auth().signOut()} style={{ height: 45 }}>
+            <Button onPress={() => firebase.auth().signOut()} style={{ height: 145 }}>
                Log Out
             </Button>
           </View>
