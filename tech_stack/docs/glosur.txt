@@ -1,3 +1,4 @@
+Lecture 81, 2:12
 * Libraries in Reducers
   - Connect helper: notað til að connencta component við redux store
 
