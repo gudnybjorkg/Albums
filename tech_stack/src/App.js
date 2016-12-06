@@ -4,11 +4,14 @@ import { View } from 'react-native';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux'; // býr til storeið
 import Reducers from './Reducers';
+import { Header } from './Components/Common';
 
 const App = () => {
   return (
     <Provider store={createStore(Reducers)}>
-      <View />
+      <View>
+        <Header headerText="Tech Stack" />
+      </View>
     </Provider>
   );
 };
