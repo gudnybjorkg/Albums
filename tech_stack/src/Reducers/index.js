@@ -7,4 +7,5 @@ import LibraryReducer from './LibraryReducer';
 //console.log(store.getState()); skilar {libraries: []} því LibraryReducer skilar tómu []
 export default combineReducers({
   libraries: LibraryReducer
+  selectedLibraryId: 
 });

@@ -1,5 +1,5 @@
 * Libraries in Reducers
-  - 
+  - Connect helper: notað til að connencta component við redux store
 
 * Redux
   - Action: A plain JS object that tells the reducer how to modify its data.
