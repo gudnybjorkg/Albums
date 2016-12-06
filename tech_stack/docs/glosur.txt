@@ -1,0 +1,35 @@
+* Redux
+  - Action: A plain JS object that tells the reducer how to modify its data.
+  - Store: An object that holds the application's data.
+    - Reducer: A function that returns some data. Must have a type property.
+    - State: Data for our app to use
+
+  Action -> Reducer -> State
+    T.d. taka string af characters og splitta þeim í array
+    Action: strengur 'asdf' og action type 'split' til að senda í reducerinn
+    Reducer: tekur actions typið split og strenginn og setur í arrayið
+    State: inniheldur 'a' 's' 'd' og 'f' í array
+
+    //býst við reducer til að parsa inn í create store sem býr til stateið
+
+    //alltaf kallað með 2 arguments; state og action
+    const reducer = (state = [], action) => { // Fall sem skilar array
+    	if (action.type === 'split_string') {
+        return action.payload.split('');
+      }
+      return state;
+    };
+    const store = Redux.createStore(reducer);
+
+    //skilar state
+    store.getState();
+
+    // type property sem segir producernum að gera eitthvað ákveðið, action. í þessu tilfelli splitta
+    const action = {
+    	type: 'split_string', // command
+      payload: 'asdf' // gögnin sem á að vinna með
+    };
+
+    //til þess að mata reducerinn með actioninu
+    store.dispatch(action);
+    store.getState();
