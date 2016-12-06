@@ -1,3 +1,5 @@
+* 
+
 * Redux
   - Action: A plain JS object that tells the reducer how to modify its data.
   - Store: An object that holds the application's data.
@@ -12,24 +14,43 @@
 
     //býst við reducer til að parsa inn í create store sem býr til stateið
 
-    //alltaf kallað með 2 arguments; state og action
-    const reducer = (state = [], action) => { // Fall sem skilar array
-    	if (action.type === 'split_string') {
-        return action.payload.split('');
-      }
-      return state;
-    };
-    const store = Redux.createStore(reducer);
+//alltaf kallað með 2 arguments; state og action
+const reducer = (state = [], action) => { // Fall sem skilar array
+	if (action.type === 'split_string') {
+    return action.payload.split('');
+  }
+  else if (action.type === 'add_character') {
+    //access the previous state með því að vitna í state parameterinn sem inniheldur gamla stateið
+    //state.push(action.payload); // viljum þetta ekki því það breytir upphaflega state-inu með því að pusha því í stað þess að búa til annað og skila því
+    //return state;
 
-    //skilar state
-    store.getState();
+    //Búa til nýtt afrit af state með action með öllu sem er í gamla stateinu og setur gögnin
+    //Sem voru í action.payload með. Myndar því array með gömlu og nýju gildunum.
+    return [ ...state, action.payload ];
 
-    // type property sem segir producernum að gera eitthvað ákveðið, action. í þessu tilfelli splitta
-    const action = {
-    	type: 'split_string', // command
-      payload: 'asdf' // gögnin sem á að vinna með
-    };
+  }
+  return state;
+};
+const store = Redux.createStore(reducer);
 
-    //til þess að mata reducerinn með actioninu
-    store.dispatch(action);
-    store.getState();
+//skilar state
+store.getState();
+
+// type property sem segir producernum að gera eitthvað ákveðið, action. í þessu tilfelli splitta
+const action = {
+	type: 'split_string', // command
+  payload: 'asdf' // gögnin sem á að vinna með
+};
+
+//til þess að mata reducerinn með actioninu
+store.dispatch(action);
+store.getState();
+
+//annað action sem modifyar stateið með því að bæta við 'a' í stateið
+const action2 = {
+  type: 'add_character',
+  payload: 'a'
+};
+
+store.dispatch(action2);
+store.getState(); // ekkert breyttist í raun nema að reducerinn tékkar á type fyrir add_character
